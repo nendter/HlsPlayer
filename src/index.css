@@ -2,12 +2,24 @@
 :root {
     --shade: #111111;
     --shade-2: #171717;
+    --shade-3: #222222;
 
     --tint: #FFFFFF;
+    --tint-2: #999999;
+    --tint-3: #888888;
+    --tint-4: #666666;
+    --tint-5: #555555;
 
 
     --border-radius: 16px;
-    --spacing: 24px;
+    --border-radius-s: 12px;
+    --spacing: 12px;
+
+    --font-size: 14px;
+    --font-size-s: 11px;
+
+
+    --border: 1px solid rgba(255, 255, 255, .01);
 }
 
 
@@ -26,4 +38,44 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input, button, textarea {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+/* Library */
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--shade-2);
+    border-radius: var(--border-radius-s);
+    border: var(--border);
+}
+
+.input label {
+    padding-left: calc(var(--spacing) * 1.4);
+    padding-top: calc(var(--spacing) * .8);
+    padding-bottom: calc(var(--spacing) * .05);
+    font-size: var(--font-size-s);
+    font-weight: 500;
+    color: var(--tint-5);
+}
+
+.input input {
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 1.4);
+    padding-top: 0;
+    height: 100%;
+    color: var(--tint);
+    font-size: var(--font-size);
+    /*padding-top: calc(var(--spacing) * 0.25);*/
+}
+
+::placeholder {
+    color: var(--tint-4);
 }
